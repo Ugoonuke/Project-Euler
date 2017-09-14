@@ -16,7 +16,7 @@ int main() {
 	int d = b;;
 	cout<<"Please enter the length of Fibonacci sequence: ";
 	cin>>c;
-	cout<<"\nFibonacci Sequence\n\n1, 2";
+	cout<<"\nFibonacci Sequence\n1, 2";
 	for(int i = 0; i < c-2; i++) {
 		t = a;
 		a = b;
@@ -24,7 +24,7 @@ int main() {
 		if(b%2 == 0) d += b;
 		cout<<", "<<b;
 	}
-	cout<<"\nThe sum of the even-valued terms of the Fibonacci Sequence is "<<d<<endl;
+	cout<<"\n\nThe sum of the even-valued terms of the Fibonacci Sequence is "<<d<<endl;
 	cout<<"\nEclipse C++"<<endl;
 	return 0;
 }
