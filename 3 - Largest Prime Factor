@@ -11,24 +11,26 @@
 using namespace std;
 
 int main() {
-	int a, b = 0, c, d;
-	cout<<"Please enter a positive integer: ";
-	cin>>a;
+	long long int a = 600851475143, c, d;
+	int b = 0, count = -1, temp;
 	d = a;
-	for(int i = 2; a > i; a--) {
-		for(int j = 1; j <= sqrt((double)a); j++) {
-			if(a%j == 0) b++;
+	for(int i = 2; i < sqrt((double)a); i++) {
+		for(int j = 1; j <= sqrt((double)i); j++) {
+			if(i%j == 0) b++;
 			if(b > 1) {
 				b = 0;
 				break;
 			}
 		}
 		if(b == 1) {
-			c = a;
-			break;
+			count++;
+			c = i;
+		}
+		if(d%c == 0) {
+			temp = c;
 		}
 	}
-	cout<<"Highest Prime Factor between 2-"<<d<<" is "<<c<<endl;
+	cout<<"Highest Prime Factor of "<<d<<" is "<<temp<<endl;
 	cout<<"\nEclipse C++"<<endl;
 	return 0;
 }
